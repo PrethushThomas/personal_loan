@@ -3,7 +3,7 @@ from pycaret.classification import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
-model = load_model('bank_loan')
+model = load_model('bank-loan')
 
 
 
@@ -17,8 +17,8 @@ def predict(model, input_df):
 
 def run():
     from PIL import Image
-    image = Image.open('/content/Personal_Loan.jpg')
-    image_office = Image.open('/content/bank.jpg')
+    image = Image.open('Personal_Loan.jpg')
+    image_office = Image.open('bank.jpg')
     st.image(image,use_column_width=True)
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?",
